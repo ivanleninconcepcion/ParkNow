@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - ParkNow</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <div class="login-box card-shadow">
+      <img src="download (1).jpg" alt="ParkNow Logo" class="login-logo" />
+      <p>Sign in to continue</p>
+      <form onsubmit="login(event)">
+        <label>Username</label>
+        <input type="text" id="username" required placeholder="Enter username" />
+
+        <label>Password</label>
+        <input type="password" id="password" required placeholder="Enter password" />
+
+        <div class="login-options">
+          <label class="remember-me">
+            <input type="checkbox" id="remember" /> Remember Me
+          </label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  

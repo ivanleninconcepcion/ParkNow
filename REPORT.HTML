@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Records</title>
+  <link rel="stylesheet" href="try.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onload="loadReports()">
+  <div class="sidebar">
+    <h2><img src="download (1).jpg" class="side-logo" /> ParkNow</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="RECORD.HTML">Records</a>
+    <a href="REPORT.HTML" class="active">Daily Records</a>
+    <button onclick="logout()">Sign out</button>
+  </div>
+
+  <div class="main">
+    <h2>Daily Records</h2>
+    <button class="clear-btn" onclick="clearAllDailyReports()">🗑 Clear Daily Records</button>
+    <div id="dailyReportsContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Records</title>
+  <link rel="stylesheet" href="try.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onload="loadRecords(); renderParkingGrid();">
+  <div class="sidebar">
+    <h2><img src="download (1).jpg" class="side-logo" /> ParkNow</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="RECORD.HTML" class="active">Records</a>
+    <a href="REPORT.HTML">Daily Records</a>
+    <button onclick="logout()">Sign out</button>
+  </div>
+
+  <div class="main">
+    <h2>Vehicle Records</h2>
+
+    <button class="add-btn" onclick="showEntryForm()">➕ Add Vehicle</button>
+    <button class="clear-btn" onclick="clearAllRecords()">🗑 Clear All Records</button>
+
+    <div id="entryForm" class="entry-form card-shadow" style="display:none;">
+      <h3>Add New Vehicle</h3>
+
+      <label>Plate Number:</label>
+      <input type="text" id="plate" placeholder="e.g. ABC1234" maxlength="7" />
+
+      <label>Contact Number:</label>
+      <input type="text" id="contact" placeholder="e.g. 09123456789" maxlength="11" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+
+      <label>Selected Spot:</label>
+      <input type="text" id="spotInput" readonly placeholder="Click a slot below to choose" />
+
+      <div class="form-actions">
+        <button class="primary-btn" onclick="addRecord()">Park</button>
+        <button class="secondary-btn" onclick="closeEntryForm()">Cancel</button>
+      </div>
+    </div>
+
+    <h3>Parking Map</h3>
+    <div id="parkingGrid" class="parking-grid" aria-label="Parking slots"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Plate</th>
+          <th>Contact</th>
+          <th>Spot</th>
+          <th>Time In</th>
+          <th>Time Out</th>
+          <th>Hours</th>
+          <th>Earnings</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="recordTable"></tbody>
+    </table>
+
+    <div id="totalEarnings" class="earnings-summary">💰 Total Earnings Today: ₱0.00</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

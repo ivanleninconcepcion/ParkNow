@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="try.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onload="loadDashboard(); renderParkingGrid();">
+  <div class="sidebar">
+    <h2><img src="download (1).jpg" class="side-logo" /> ParkNow</h2>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="RECORD.HTML">Records</a>
+    <a href="REPORT.HTML">Daily Reports</a>
+    <button onclick="logout()">Sign out</button>
+  </div>
+
+  <div class="main">
+    <h2>Welcome, <span id="adminName">Admin</span> 👋</h2>
+    <p id="datetime" style="color:#666; margin-top:6px;"></p>
+
+    <div class="cards">
+      <div class="card blue">Total Records <br><span id="totalVehiclePark">0</span></div>
+      <div class="card green">Vehicles In <br><span id="vehicleIn">0</span></div>
+      <div class="card red">Vehicles Out <br><span id="vehicleOut">0</span></div>
+      <div class="card orange">Available Spots <br><span id="availableParking">0</span></div>
+      <div class="card violet">Total Earnings <br><span id="totalEarningsDashboard">₱0.00</span></div>
+    </div>
+
+    <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2 style="margin-bottom: 15px;">Parking Slots Overview</h2>
+      </div>
+
+    <div id="parkingGrid" class="parking-grid"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
